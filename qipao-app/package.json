@@ -1,0 +1,8 @@
+{
+  "name": "qipao-app",
+  "version": "1.0.0",
+  "description": "网站项目",
+  "scripts": {
+    "build": "echo 'No build step needed'"
+  }
+} 
