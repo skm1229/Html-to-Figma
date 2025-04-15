@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社区 - 旗袍雅集</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="../public/css/common.css" rel="stylesheet">
+    <style>
+        .content {
+            background: #f8f8f8;
+            height: calc(100vh - 104px);
+            overflow-y: auto;
+            padding-bottom: 20px;
+        }
+        .content::-webkit-scrollbar {
+            display: none;
+        }
+        .story-tabs {
+            background: white;
+            padding: 12px 0;
+            margin-bottom: 12px;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .story-tabs::-webkit-scrollbar {
+            display: none;
+        }
+        .story-tab {
+            display: inline-block;
+            padding: 6px 16px;
+            color: #666;
+            font-size: 14px;
+            position: relative;
+        }
+        .story-tab.active {
+            color: #8B4513;
+            font-weight: 500;
+        }
+        .story-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 2px;
+            background: #8B4513;
+            border-radius: 1px;
+        }
+        .post-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .post-header {
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .user-info {
+            flex: 1;
+        }
+        .username {
+            font-weight: 500;
+            color: #333;
+            font-size: 14px;
+        }
+        .post-meta {
+            color: #999;
+            font-size: 12px;
+        }
+        .post-content {
+            padding: 0 12px 12px;
+        }
+        .post-text {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        .post-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-image {
+            aspect-ratio: 1;
+            object-fit: cover;
+            width: 100%;
+        }
+        .post-actions {
+            padding: 12px;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-around;
+        }
+        .action-btn {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: #666;
+            font-size: 13px;
+        }
+        .floating-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 84px;
+            width: 48px;
+            height: 48px;
+            background: #8B4513;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 4px 12px rgba(139, 69, 19, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- 导航栏 -->
+        <div class="nav-bar">
+            <div class="nav-title">雅集社区</div>
+        </div>
+
+        <!-- 内容区域 -->
+        <div class="content">
+            <!-- 故事分类 -->
+            <div class="story-tabs">
+                <a href="#" class="story-tab active">推荐</a>
+                <a href="#" class="story-tab">穿搭</a>
+                <a href="#" class="story-tab">文化</a>
+                <a href="#" class="story-tab">活动</a>
+                <a href="#" class="story-tab">教程</a>
+                <a href="#" class="story-tab">好物</a>
+            </div>
+
+            <!-- 动态列表 -->
+            <div class="post-list">
+                <!-- 动态卡片 1 -->
+                <div class="post-card">
+                    <div class="post-header">
+                        <img src="../images/头像.jpg" alt="用户头像" class="avatar">
+                        <div class="user-info">
+                            <div class="username">优雅随行</div>
+                            <div class="post-meta">2小时前 · 上海</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-text">
+                            今日搭配分享 💐 
+                            春日里的一抹淡雅，新入手的真丝旗袍，盘扣与刺绣的细节都很精致。搭配珍珠项链和绣花鞋，演绎东方女性的优雅气质。
+                        </div>
+                        <div class="post-images">
+                            <img src="../images/社区1.jpg" alt="旗袍展示" class="post-image">
+                            <img src="../images/社区2.jpg" alt="旗袍细节" class="post-image">
+                            <img src="../images/社区1.jpg" alt="搭配展示" class="post-image">
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn">
+                            <i class="far fa-heart"></i>
+                            <span>赞 328</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="far fa-comment"></i>
+                            <span>评论 42</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="far fa-bookmark"></i>
+                            <span>收藏</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="far fa-share-square"></i>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 动态卡片 2 -->
+                <div class="post-card">
+                    <div class="post-header">
+                        <img src="../images/头像.jpg" alt="用户头像" class="avatar">
+                        <div class="user-info">
+                            <div class="username">旗袍文化传承者</div>
+                            <div class="post-meta">4小时前 · 苏州</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-text">
+                            【旗袍知识小课堂】
+                            今天来聊聊旗袍的立领工艺。传统苏州手工立领需要经过九道工序，每一针都是匠心独运。视频里为大家详细讲解了立领的制作过程，感兴趣的姐妹可以学习参考～
+                        </div>
+                        <div class="post-images">
+                            <img src="../images/旗袍5.jpg" alt="教程截图" class="post-image" style="grid-column: span 3;">
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn">
+                            <i class="far fa-heart"></i>
+                            <span>赞 156</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="far fa-comment"></i>
+                            <span>评论 28</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="far fa-bookmark"></i>
+                            <span>收藏</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="far fa-share-square"></i>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 发布按钮 -->
+        <button class="floating-btn">
+            <i class="fas fa-plus"></i>
+        </button>
+
+        <!-- 底部标签栏 -->
+        <div class="tab-bar">
+            <a href="home.html" class="tab-item">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </a>
+            <a href="shop.html" class="tab-item">
+                <i class="fas fa-store"></i>
+                <span>商城</span>
+            </a>
+            <a href="community.html" class="tab-item active">
+                <i class="fas fa-comments"></i>
+                <span>社区</span>
+            </a>
+            <a href="profile.html" class="tab-item">
+                <i class="fas fa-user"></i>
+                <span>我的</span>
+            </a>
+            <a href="more.html" class="tab-item">
+                <i class="fas fa-ellipsis-h"></i>
+                <span>更多</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html> 

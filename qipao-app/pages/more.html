@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更多 - 旗袍雅集</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="../public/css/common.css" rel="stylesheet">
+    <style>
+        .content {
+            background: #f8f8f8;
+            height: calc(100vh - 52px);
+            padding: 12px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 8px;
+            background: #FDF5E6;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8B4513;
+        }
+        .feature-title {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        .feature-desc {
+            font-size: 12px;
+            color: #999;
+        }
+        .menu-list {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 14px;
+            color: #333;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .menu-item:last-child {
+            border: none;
+        }
+        .menu-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8B4513;
+        }
+        .menu-arrow {
+            margin-left: auto;
+            color: #999;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            margin: 16px 0 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- 导航栏 -->
+        <div class="nav-bar">
+            <div class="nav-title">更多服务</div>
+        </div>
+
+        <!-- 内容区域 -->
+        <div class="content">
+            <!-- 特色功能 -->
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ruler fa-lg"></i>
+                    </div>
+                    <div class="feature-title">智能量体</div>
+                    <div class="feature-desc">AI精准测量尺寸</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-magic fa-lg"></i>
+                    </div>
+                    <div class="feature-title">虚拟试衣</div>
+                    <div class="feature-desc">3D模拟穿搭效果</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book fa-lg"></i>
+                    </div>
+                    <div class="feature-title">文化课堂</div>
+                    <div class="feature-desc">传统文化解读</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt fa-lg"></i>
+                    </div>
+                    <div class="feature-title">线下活动</div>
+                    <div class="feature-desc">雅集沙龙预约</div>
+                </div>
+            </div>
+
+            <!-- 增值服务 -->
+            <h2 class="section-title">增值服务</h2>
+            <div class="menu-list">
+                <a href="#" class="menu-item">
+                    <div class="menu-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <span>私人定制</span>
+                    <i class="fas fa-chevron-right menu-arrow"></i>
+                </a>
+                <a href="#" class="menu-item">
+                    <div class="menu-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <span>养护服务</span>
+                    <i class="fas fa-chevron-right menu-arrow"></i>
+                </a>
+                <a href="#" class="menu-item">
+                    <div class="menu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <span>礼仪课程</span>
+                    <i class="fas fa-chevron-right menu-arrow"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- 底部标签栏 -->
+        <div class="tab-bar">
+            <a href="home.html" class="tab-item">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </a>
+            <a href="shop.html" class="tab-item">
+                <i class="fas fa-store"></i>
+                <span>商城</span>
+            </a>
+            <a href="community.html" class="tab-item">
+                <i class="fas fa-comments"></i>
+                <span>社区</span>
+            </a>
+            <a href="profile.html" class="tab-item">
+                <i class="fas fa-user"></i>
+                <span>我的</span>
+            </a>
+            <a href="more.html" class="tab-item active">
+                <i class="fas fa-ellipsis-h"></i>
+                <span>更多</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 旗袍雅集</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="../public/css/common.css" rel="stylesheet">
+    <style>
+        .login-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #F5F5F5 0%, #FFF 100%);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .login-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 240px;
+            background: url('https://images.unsplash.com/photo-1602467442378-50e4aee35b51?w=800') center/cover;
+            opacity: 0.1;
+        }
+        .brand-logo {
+            width: 120px;
+            height: 120px;
+            margin: 48px auto;
+            background: #8B4513;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(139, 69, 19, 0.1);
+        }
+        .brand-logo img {
+            width: 80px;
+            height: 80px;
+        }
+        .welcome-text {
+            text-align: center;
+            margin-bottom: 48px;
+            position: relative;
+        }
+        .welcome-text h1 {
+            font-family: "SimSun", serif;
+            letter-spacing: 0.1em;
+        }
+        .input-wrapper {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        .input-field {
+            border: 1px solid #E8E8E8;
+            transition: all 0.3s ease;
+        }
+        .input-field:focus {
+            border-color: #8B4513;
+            box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.1);
+        }
+        .btn-primary {
+            background: #8B4513;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: #704012;
+        }
+        .btn-outline {
+            border-color: #8B4513;
+            color: #8B4513;
+        }
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 24px;
+            position: relative;
+        }
+        .social-divider {
+            position: relative;
+            text-align: center;
+            margin: 24px 0;
+        }
+        .social-divider::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            height: 1px;
+            background: #E8E8E8;
+        }
+        .social-divider span {
+            background: linear-gradient(135deg, #F5F5F5 0%, #FFF 100%);
+            padding: 0 16px;
+            color: #999;
+            font-size: 14px;
+            position: relative;
+        }
+        .social-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 24px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .social-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .agreement-text {
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            margin-top: 24px;
+            line-height: 1.6;
+        }
+        .agreement-text a {
+            color: #8B4513;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!-- 品牌标识 -->
+        <div class="brand-logo">
+            <img src="https://api.iconify.design/ph:dress.svg?color=white" alt="旗袍图标">
+        </div>
+        
+        <!-- 欢迎文本 -->
+        <div class="welcome-text">
+            <h1 class="text-2xl font-bold mb-2">旗袍雅集</h1>
+            <p class="text-gray-600">传承东方美学，品味优雅人生</p>
+        </div>
+
+        <!-- 登录表单 -->
+        <div class="input-wrapper">
+            <div class="space-y-4">
+                <div class="input-group">
+                    <input type="tel" class="input-field" placeholder="请输入手机号">
+                </div>
+                <div class="input-group">
+                    <div class="flex gap-3">
+                        <input type="text" class="input-field flex-1" placeholder="请输入验证码">
+                        <button class="btn-outline whitespace-nowrap">获取验证码</button>
+                    </div>
+                </div>
+                <button class="btn-primary w-full">登 录</button>
+            </div>
+
+            <!-- 其他登录方式 -->
+            <div class="social-divider">
+                <span>其他登录方式</span>
+            </div>
+            <div class="social-login">
+                <a href="#" class="social-btn">
+                    <i class="fab fa-weixin text-[#07C160] text-2xl"></i>
+                </a>
+                <a href="#" class="social-btn">
+                    <i class="fab fa-apple text-black text-2xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- 用户协议 -->
+        <div class="agreement-text">
+            登录即表示同意<a href="#">《用户协议》</a>和<a href="#">《隐私政策》</a><br>
+            遵循传统，注重隐私
+        </div>
+    </div>
+</body>
+</html> 

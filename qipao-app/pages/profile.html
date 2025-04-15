@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心 - 旗袍雅集</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="../public/css/common.css" rel="stylesheet">
+    <style>
+        .profile-header {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            padding: 24px 20px;
+            color: white;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+            border: 2px solid rgba(255,255,255,0.8);
+            object-fit: cover;
+        }
+        .user-stats {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            padding: 12px 0;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+        }
+        .stat-item {
+            flex: 1;
+            border-right: 1px solid rgba(255,255,255,0.2);
+        }
+        .stat-item:last-child {
+            border: none;
+        }
+        .stat-value {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        .menu-list {
+            background: white;
+            border-radius: 12px;
+            margin: 12px;
+            overflow: hidden;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            color: #333;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .menu-item:last-child {
+            border: none;
+        }
+        .menu-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8B4513;
+        }
+        .menu-arrow {
+            margin-left: auto;
+            color: #999;
+        }
+        .vip-card {
+            margin: 12px;
+            background: linear-gradient(135deg, #D2691E 0%, #8B4513 100%);
+            border-radius: 12px;
+            padding: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .vip-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .vip-info p {
+            font-size: 13px;
+            opacity: 0.8;
+        }
+        .vip-button {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- 个人信息头部 -->
+        <div class="profile-header">
+            <div class="user-info">
+                <img src="../images/头像.jpg" alt="用户头像" class="avatar">
+                <div>
+                    <h2 class="text-xl font-bold mb-1">优雅随行</h2>
+                    <p class="text-sm opacity-80">ID: 888888</p>
+                </div>
+            </div>
+            <div class="user-stats">
+                <div class="stat-item">
+                    <div class="stat-value">328</div>
+                    <div class="stat-label">获赞</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">42</div>
+                    <div class="stat-label">关注</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">128</div>
+                    <div class="stat-label">粉丝</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 会员卡片 -->
+        <div class="vip-card">
+            <div class="vip-info">
+                <h3>雅集尊享会员</h3>
+                <p>解锁更多专属权益</p>
+            </div>
+            <button class="vip-button">立即开通</button>
+        </div>
+
+        <!-- 功能菜单 -->
+        <div class="menu-list">
+            <a href="#" class="menu-item">
+                <div class="menu-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <span>我的收藏</span>
+                <i class="fas fa-chevron-right menu-arrow"></i>
+            </a>
+            <a href="#" class="menu-item">
+                <div class="menu-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <span>我的订单</span>
+                <i class="fas fa-chevron-right menu-arrow"></i>
+            </a>
+            <a href="#" class="menu-item">
+                <div class="menu-icon">
+                    <i class="fas fa-ticket-alt"></i>
+                </div>
+                <span>优惠券</span>
+                <i class="fas fa-chevron-right menu-arrow"></i>
+            </a>
+        </div>
+
+        <div class="menu-list">
+            <a href="#" class="menu-item">
+                <div class="menu-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <span>收货地址</span>
+                <i class="fas fa-chevron-right menu-arrow"></i>
+            </a>
+            <a href="#" class="menu-item">
+                <div class="menu-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <span>联系客服</span>
+                <i class="fas fa-chevron-right menu-arrow"></i>
+            </a>
+            <a href="#" class="menu-item">
+                <div class="menu-icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <span>设置</span>
+                <i class="fas fa-chevron-right menu-arrow"></i>
+            </a>
+        </div>
+
+        <!-- 底部标签栏 -->
+        <div class="tab-bar">
+            <a href="home.html" class="tab-item">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </a>
+            <a href="shop.html" class="tab-item">
+                <i class="fas fa-store"></i>
+                <span>商城</span>
+            </a>
+            <a href="community.html" class="tab-item">
+                <i class="fas fa-comments"></i>
+                <span>社区</span>
+            </a>
+            <a href="profile.html" class="tab-item active">
+                <i class="fas fa-user"></i>
+                <span>我的</span>
+            </a>
+            <a href="more.html" class="tab-item">
+                <i class="fas fa-ellipsis-h"></i>
+                <span>更多</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html> 
