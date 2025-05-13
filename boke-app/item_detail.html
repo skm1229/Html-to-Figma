@@ -1,0 +1,58 @@
+<!-- item_detail.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品详情 - Ceramics Showcase App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { font-family: "Microsoft YaHei", sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- iOS 状态栏 -->
+    <div class="bg-white h-10 flex items-center justify-between px-4 text-xs text-gray-700">
+        <span>9:41</span>
+        <div class="space-x-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+    <!-- 顶部导航栏 -->
+    <div class="bg-white flex items-center h-12 px-2 border-b border-gray-100">
+        <a href="#" class="flex items-center text-gray-700 mr-2"><i class="fas fa-chevron-left text-lg"></i></a>
+        <span class="text-base font-semibold">作品详情</span>
+    </div>
+    <!-- 主图与缩略图画廊 -->
+    <div class="relative bg-white pb-4">
+        <img src="boke-app/images/ITEM_DETAIL_LARGE_VASE.jpg" alt="陶瓷主图" class="w-full h-64 object-cover rounded-b-2xl"/>
+        <button class="absolute bottom-4 right-4 bg-white bg-opacity-80 rounded-full p-3 shadow-md">
+            <i class="fas fa-heart text-xl text-red-400"></i>
+        </button>
+        <div class="flex space-x-2 px-4 mt-2">
+            <img src="boke-app/images/ITEM_DETAIL_THUMB_1.jpg" alt="缩略图1" class="w-14 h-14 object-cover rounded-lg border-2 border-blue-200"/>
+            <img src="boke-app/images/ITEM_DETAIL_THUMB_2.jpg" alt="缩略图2" class="w-14 h-14 object-cover rounded-lg"/>
+            <img src="boke-app/images/ITEM_DETAIL_THUMB_3.jpg" alt="缩略图3" class="w-14 h-14 object-cover rounded-lg"/>
+        </div>
+    </div>
+    <!-- 作品信息区 -->
+    <div class="p-4">
+        <h1 class="text-2xl font-bold mb-2">青花瓷大花瓶</h1>
+        <div class="flex items-center mb-2">
+            <img src="boke-app/images/ARTIST_AVATAR_SMALL.png" alt="艺术家头像" class="w-7 h-7 rounded-full mr-2"/>
+            <span class="text-sm text-gray-700">王艺</span>
+        </div>
+        <div class="grid grid-cols-2 gap-2 text-sm text-gray-600 mb-4">
+            <div><span class="font-semibold">尺寸：</span>高45cm × 直径20cm</div>
+            <div><span class="font-semibold">材质：</span>瓷、青花釉</div>
+        </div>
+        <div class="text-gray-700 text-base leading-relaxed mb-4">
+            这件青花瓷大花瓶采用传统工艺烧制，釉色清雅，纹饰精美，展现了明代陶瓷艺术的高超技艺与历史底蕴。
+        </div>
+        <button class="w-full bg-blue-500 text-white rounded-xl py-3 font-semibold text-base shadow hover:bg-blue-600 transition">加入收藏</button>
+    </div>
+</body>
+</html> 

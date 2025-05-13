@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旗袍雅集应用功能结构</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .mindmap {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .center {
+            text-align: center;
+            color: #8B4513;
+            font-size: 24px;
+            margin-bottom: 30px;
+            padding: 10px;
+            background: #FFF3E0;
+            border-radius: 5px;
+        }
+        
+        .branch {
+            margin: 20px 0;
+            padding-left: 20px;
+            border-left: 2px solid #D2691E;
+        }
+        
+        .main-topic {
+            color: #8B4513;
+            font-size: 20px;
+            margin: 15px 0;
+            padding: 10px;
+            background: #FFF3E0;
+            border-radius: 5px;
+        }
+        
+        .sub-topic {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .sub-topic h3 {
+            color: #A0522D;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        
+        .items {
+            list-style: none;
+            padding-left: 20px;
+        }
+        
+        .items li {
+            color: #6D4C41;
+            margin: 5px 0;
+            position: relative;
+        }
+        
+        .items li:before {
+            content: "•";
+            color: #D2691E;
+            position: absolute;
+            left: -15px;
+        }
+        
+        .emoji {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mindmap">
+        <h1 class="center">旗袍雅集应用功能结构</h1>
+        
+        <div class="branch">
+            <div class="main-topic">
+                <span class="emoji">👤</span>用户系统
+            </div>
+            <div class="sub-topic">
+                <h3>登录/注册</h3>
+                <ul class="items">
+                    <li>手机号登录</li>
+                    <li>微信登录</li>
+                    <li>Apple登录</li>
+                    <li>快捷验证码登录</li>
+                </ul>
+                <h3>个人中心</h3>
+                <ul class="items">
+                    <li>用户信息 (ID: lalalala)</li>
+                    <li>关注数: 328</li>
+                    <li>粉丝数: 42</li>
+                    <li>获赞数: 128</li>
+                    <li>雅集专享会员</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="branch">
+            <div class="main-topic">
+                <span class="emoji">🎯</span>主要功能模块
+            </div>
+            <div class="sub-topic">
+                <h3>个人服务</h3>
+                <ul class="items">
+                    <li>我的收藏</li>
+                    <li>我的订单</li>
+                    <li>优惠券</li>
+                    <li>收货地址</li>
+                    <li>联系客服</li>
+                    <li>设置</li>
+                </ul>
+                <h3>内容展示</h3>
+                <ul class="items">
+                    <li>全部</li>
+                    <li>日常</li>
+                    <li>礼服</li>
+                    <li>旗礼</li>
+                    <li>商务</li>
+                    <li>配饰</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="branch">
+            <div class="main-topic">
+                <span class="emoji">🛍️</span>商品展示
+            </div>
+            <div class="sub-topic">
+                <h3>商品分类</h3>
+                <ul class="items">
+                    <li>新品推荐</li>
+                    <li>经典系列</li>
+                    <li>限定款式</li>
+                    <li>配饰专区</li>
+                    <li>达人推荐</li>
+                </ul>
+                <h3>商品信息</h3>
+                <ul class="items">
+                    <li>商品图片</li>
+                    <li>商品名称</li>
+                    <li>商品价格</li>
+                    <li>商品描述</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="branch">
+            <div class="main-topic">
+                <span class="emoji">👥</span>社区功能
+            </div>
+            <div class="sub-topic">
+                <h3>雅集社区</h3>
+                <ul class="items">
+                    <li>推荐</li>
+                    <li>评论</li>
+                    <li>文化</li>
+                    <li>活动</li>
+                    <li>教程</li>
+                    <li>好物</li>
+                </ul>
+                <h3>互动功能</h3>
+                <ul class="items">
+                    <li>点赞</li>
+                    <li>收藏</li>
+                    <li>分享</li>
+                    <li>评论</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="branch">
+            <div class="main-topic">
+                <span class="emoji">⭐</span>增值服务
+            </div>
+            <div class="sub-topic">
+                <h3>智能服务</h3>
+                <ul class="items">
+                    <li>智能量体</li>
+                    <li>虚拟试衣</li>
+                </ul>
+                <h3>文化服务</h3>
+                <ul class="items">
+                    <li>文化课堂</li>
+                    <li>线下活动</li>
+                </ul>
+                <h3>增值服务</h3>
+                <ul class="items">
+                    <li>私人定制</li>
+                    <li>养护服务</li>
+                    <li>礼仪课程</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
