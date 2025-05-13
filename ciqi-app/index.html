@@ -1,0 +1,126 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>瓷器文旅App原型 - 总览</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { background: #F8F8F8; }
+    .iphone-frame {
+      width: 393px;
+      height: 852px;
+      border-radius: 2rem;
+      overflow: hidden;
+      box-shadow: 0 4px 32px rgba(90,143,139,0.12);
+      background: #fff;
+      border: 1.5px solid #e5e7eb;
+      position: relative;
+      margin: 0 auto;
+    }
+    .frame-card {
+      position: relative;
+      margin: 1.5rem 1rem 2.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background: transparent;
+    }
+    .iframe-controls-capsule {
+      position: absolute;
+      top: 4.5rem;
+      right: 1.2rem;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 999px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border: 1.5px solid #e5e7eb;
+      padding: 0.18rem 0.35rem 0.18rem 0.7rem;
+      gap: 0.5rem;
+      min-width: 70px;
+      height: 2.3rem;
+    }
+    .iframe-controls-capsule .more-btn {
+      background: none;
+      border: none;
+      color: #333;
+      font-size: 1.2rem;
+      margin-right: 0.2rem;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .iframe-controls-capsule .close-btn {
+      background: #F3F4F6;
+      border: none;
+      border-radius: 999px;
+      width: 1.7rem;
+      height: 1.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #5A8F8B;
+      font-size: 1.1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      margin-left: 0.2rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .iframe-controls-capsule .close-btn:hover {
+      background: #e0f2f1;
+    }
+    .frames-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 2.5rem 0 2rem 0;
+      gap: 0;
+    }
+    @media (max-width: 1300px) {
+      .frames-grid { max-width: 100vw; }
+    }
+    @media (max-width: 1200px) {
+      .frame-card { margin: 1.2rem 0.5rem 2rem 0.5rem; }
+    }
+    @media (max-width: 900px) {
+      .frames-grid { flex-direction: column; align-items: center; }
+      .frame-card { margin: 1.2rem auto 2rem auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frames-grid">
+    <div class="frame-card">
+      <iframe src="/pages/home_main.html" class="iphone-frame" frameborder="0"></iframe>
+    </div>
+    <div class="frame-card">
+      <iframe src="/pages/wenwu_list.html" class="iphone-frame" frameborder="0"></iframe>
+    </div>
+    <div class="frame-card">
+      <iframe src="/pages/explore_interactive.html" class="iphone-frame" frameborder="0"></iframe>
+    </div>
+    <div class="frame-card">
+      <iframe src="/pages/activity_list.html" class="iphone-frame" frameborder="0"></iframe>
+    </div>
+    <div class="frame-card">
+      <iframe src="/pages/profile_user.html" class="iphone-frame" frameborder="0"></iframe>
+    </div>
+    <div class="frame-card">
+      <iframe src="/pages/detail.html" class="iphone-frame" frameborder="0"></iframe>
+    </div>
+    <div class="frame-card">
+      <iframe src="/pages/museum_info.html" class="iphone-frame" frameborder="0"></iframe>
+    </div>
+  </div>
+</body>
+</html> 
